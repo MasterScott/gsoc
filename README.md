@@ -10,7 +10,7 @@ In your application tell us:
 3. How will you implement it: provide a detailed work timeline that breaks the project into one or two week milestones
 4. Why you: link to any previous GitHub pull-requests you've submitted to any project (ideally Homebrew-related)
 
-We specifically welcome applications from women and people of colour.
+Homebrew is actively seeking to diversify our contributors and especially welcome applications from women from all backgrounds and people of colour.
 
 ## Ideas
 These are suggestions that we think would make good Google Summer of Code projects. Feel free to open an issue if you wish to discuss or propose your own idea.
