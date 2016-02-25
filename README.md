@@ -36,5 +36,8 @@ Not all of Homebrew's APIs are documented. These should all be documented and a 
 ### Add features to resources
 Homebrew provides `resource` blocks for lightweight formulae-like things within formulae. These should be extended to support patching with `patch do` blocks, sharing cached resource downloads and other improvements you suggest.
 
+### Add `variant`s as an `option` alternative
+A `variant` block should allow specifying dependencies, resources and other DSL methods inside itself and can be specified like an option.
+
 ### Try and build and upload pull request bottles using Travis CI
 Homebrew uses Travis CI for some of our CI builds. We cannot currently build and upload pull request bottles using Travis CI but it would be good to try and do so so we can rely more on Travis CI and less on our own infrastructure. 
