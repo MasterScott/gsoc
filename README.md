@@ -31,7 +31,7 @@ Homebrew's code coverage for `brew tests` is poor. This could be improved by wri
 Users of Homebrew Bundle may wish to pin to a particular version of a package without knowing about the Homebrew Versions tap. There should be a DSL added to Homebrew core, bundle and versions to allow this to be handled smoothly.
 
 ### Complete public API documentation
-Not all of Homebrew's APIs are documented. These should all be documented and a the presentation optimised to make it easier for people writing new formulae.
+Not all of Homebrew's APIs are documented. These should all be documented and the presentation optimised to make it easier for people writing new formulae.
 
 ### Add features to resources
 Homebrew provides `resource` blocks for lightweight formulae-like things within formulae. These should be extended to support patching with `patch do` blocks, sharing cached resource downloads and other improvements you suggest.
