@@ -12,6 +12,10 @@ In your application tell us:
 
 Homebrew is actively seeking to diversify our contributors and especially welcome applications from women from all backgrounds and people of colour.
 
+## Technologies Used
+
+Homebrew is written in Ruby, runs on Apple's OS X operating system and uses Git and GitHub for version control and updates. You do not need to have used any of these before but must have access to a Mac and be willing to learn Ruby, Git and GitHub.
+
 ## Ideas
 These are suggestions that we think would make good Outreachy or Google Summer of Code projects. Feel free to open an issue if you wish to discuss or propose your own idea.
 
