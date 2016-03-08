@@ -1,5 +1,5 @@
-# Homebrew's Google Summer of Code
-These ideas are suggestions that we think would make good Google Summer of Code projects. They are only meant to be a starting point. Check out our proposal template, and feel free to open an issue to ask questions or discuss other ideas.
+# Homebrew's Outreachy and Google Summer of Code
+These ideas are suggestions that we think would make good Outreachy or Google Summer of Code projects. They are only meant to be a starting point. Check out our proposal template, and feel free to open an issue to ask questions or discuss other ideas.
 
 ## Application Instructions
 
@@ -13,7 +13,7 @@ In your application tell us:
 Homebrew is actively seeking to diversify our contributors and especially welcome applications from women from all backgrounds and people of colour.
 
 ## Ideas
-These are suggestions that we think would make good Google Summer of Code projects. Feel free to open an issue if you wish to discuss or propose your own idea.
+These are suggestions that we think would make good Outreachy or Google Summer of Code projects. Feel free to open an issue if you wish to discuss or propose your own idea.
 
 ### Emit warnings for mistyped options (https://github.com/Homebrew/homebrew/issues/8937)
 Currently providing options that don't exist for formulae or Homebrew commands silently ignores them. These should instead print a warning to user. This project will involve tracking options for formulae and their dependencies and a new DSL for commands to declare what options they accept.
