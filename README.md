@@ -12,6 +12,16 @@ In your application tell us:
 
 Homebrew is actively seeking to diversify our contributors and especially welcome applications from women from all backgrounds and people of colour.
 
+### Google Summer of Code
+Please read and apply via https://summerofcode.withgoogle.com/get-started/.
+
+### Outreachy
+Please read https://wiki.gnome.org/Outreachy/#Submit_an_Application and apply via https://outreachy.gnome.org/?q=program_home&prg=6.
+
+## Mentors
+- Mike McQuaid (mike@mikemcquaid.com)
+- More to follow
+
 ## Technologies Used
 
 Homebrew is written in Ruby, runs on Apple's OS X operating system and uses Git and GitHub for version control and updates. You do not need to have used any of these before but must have access to a Mac and be willing to learn Ruby, Git and GitHub.
