@@ -23,6 +23,7 @@ Please read https://wiki.gnome.org/Outreachy/#Submit_an_Application and apply vi
 - [@mistydemeo](https://github.com/mistydemeo) (mistydemeo@gmail.com)
 - [@woodruffw](https://github.com/woodruffw) (william@yossarian.net)
 - [@jawshooah](https://github.com/jawshooah) (hagins.josh@gmail.com)
+- [@tdsmith](https://github.com/tdsmith)
 - [@ilovezfs](https://github.com/ilovezfs)
 - more to follow
 
