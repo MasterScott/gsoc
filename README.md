@@ -21,6 +21,7 @@ Please read https://wiki.gnome.org/Outreachy/#Submit_an_Application and apply vi
 ## Mentors
 - [@MikeMcQuaid](https://github.com/mikemcquaid) (mike@mikemcquaid.com)
 - [@mistydemeo](https://github.com/mistydemeo) (mistydemeo@gmail.com)
+- [@woodruffw](https://github.com/woodruffw) (william@yossarian.net)
 - [@ilovezfs](https://github.com/ilovezfs)
 - more to follow
 
