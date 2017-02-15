@@ -45,9 +45,6 @@ Homebrew's code coverage for `brew tests` is poor. This could be improved by wri
 ### Better support pinning to a major/minor version with Homebrew Bundle and `@`-versioned formulae
 Users of Homebrew Bundle may wish to pin to a particular version of a package without knowing about versioned formulae. These formulae should be used automatically when possible. Inspiration can be taken from RubyGems and a `Brewfile.lock` file could be generated.
 
-### Complete public API documentation
-Not all of Homebrew's public APIs are documented. These should all be documented and the presentation optimised to make it easier for people writing new formulae. This will involve figuring out how existing code works, what APIs can be made private or hidden and discussing with Homebrew maintainers how best to describe a given API.
-
 ### Add features to resources
 Homebrew provides `resource` blocks for lightweight formulae-like things within formulae. These should be extended to support patching with `patch do` blocks, inferring versions from the formula, sharing cached resource downloads when the same file is downloaded between formulae, being conditionally downloaded and other improvements you suggest.
 
