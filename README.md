@@ -22,6 +22,7 @@ Please read https://wiki.gnome.org/Outreachy/#Submit_an_Application and apply vi
 - [@MikeMcQuaid](https://github.com/mikemcquaid) (mike@mikemcquaid.com)
 - [@mistydemeo](https://github.com/mistydemeo) (mistydemeo@gmail.com)
 - [@woodruffw](https://github.com/woodruffw) (william@yossarian.net)
+- [@jawshooah](https://github.com/jawshooah) (hagins.josh@gmail.com)
 - [@ilovezfs](https://github.com/ilovezfs)
 - more to follow
 
