@@ -8,7 +8,7 @@ In your application tell us:
 1. Who you are: your name and how we contact you (e.g. email)
 2. What idea are you proposing: which of our ideas is it or describe in detail if it's your own
 3. How will you implement it: provide a detailed work timeline that breaks the project into one or two week milestones
-4. Why you: link to a previous Homebrew pull-request you've submitted
+4. Why you: link to a previous Homebrew pull request you've submitted (this is a requirement to be accepted)
 
 Homebrew is actively seeking to diversify our contributors and especially welcome applications from women from all backgrounds and people of colour.
 
@@ -28,6 +28,12 @@ Please read https://wiki.gnome.org/Outreachy/#Submit_an_Application and apply vi
 - more to follow
 
 Mentorship happens privately on our Homebrew maintainer's Slack and publicly on GitHub pull requests. Each student and project will be assigned a mentor but all students will work with all mentors.
+
+## Pass Requirements
+
+- To be accepted one trivial pull request for your project to Homebrew will need to be merged (this can be far prior to the program)
+- To pass the mid-term assessment one non-trivial pull request for your project to Homebrew will need to be opened
+- To pass the final assessment one non-trivial pull request for your project to Homebrew will need to be reviewed and merged
 
 ## Technologies Used and Requirements
 
