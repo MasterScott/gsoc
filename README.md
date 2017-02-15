@@ -46,10 +46,17 @@ Users of Homebrew Bundle may wish to pin to a particular version of a package wi
 Not all of Homebrew's public APIs are documented. These should all be documented and the presentation optimised to make it easier for people writing new formulae. This will involve figuring out how existing code works, what APIs can be made private or hidden and discussing with Homebrew maintainers how best to describe a given API.
 
 ### Add features to resources
-Homebrew provides `resource` blocks for lightweight formulae-like things within formulae. These should be extended to support patching with `patch do` blocks, sharing cached resource downloads when the same file is downloaded between formulae, being conditionally downloaded and other improvements you suggest.
+Homebrew provides `resource` blocks for lightweight formulae-like things within formulae. These should be extended to support patching with `patch do` blocks, inferring versions from the formula, sharing cached resource downloads when the same file is downloaded between formulae, being conditionally downloaded and other improvements you suggest.
 
 ### Add `variant`s as an `option` alternative
 A `variant do` block should allow specifying dependencies, resources, exclusivity with other `variant`s and other DSL methods inside itself and can be specified like an option. This will require working with both Homebrew/brew code and Homebrew/homebrew-core formulae code to adapt some existing code to use variants rather than options.
+
+### Cache subdirectories for formulae and versions for speedup
+The `HOMEBREW_CACHE` should be rearranged to have a `Cellar`-like hierarchy with subdirectories for formulae and then versions, resources and patches. This should be used to speed up `brew cleanup` so that it can be implemented in Bash and run automatically to clean up now
+irrelevant files to free up disk space.
+
+### Port `brew audit` rules to RuboCop
+`brew audit` now runs RuboCop custom cops to enforce and automatically fix Homebrew coding style guidelines within supported editors and using the `rubocop` tool. All possible `brew audit` rules (e.g. those using `regex` matches) should be migrated to use RuboCop rather than custom `brew audit` logic.
 
 ### Other Ideas
 You may also get inspiration from [open `help wanted` issues on Homebrew/brew](https://github.com/homebrew/brew/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22). Please discuss any of these with us before submission to maximise your changes of being accepted.
