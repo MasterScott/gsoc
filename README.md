@@ -1,4 +1,6 @@
 # Homebrew's Outreachy and Google Summer of Code
+Homebrew is a package manager for macOS written in Ruby.
+
 These ideas are suggestions that we think would make good Outreachy or Google Summer of Code projects. They are only meant to be a starting point. Check out our proposal template, and feel free to open an issue to ask questions or discuss other ideas.
 
 ## Application Instructions
