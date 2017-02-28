@@ -44,7 +44,7 @@ Homebrew is written in Ruby, runs on Apple's macOS operating system and uses Git
 ## Ideas
 These are suggestions that we think would make good Outreachy or Google Summer of Code projects. Feel free to open an issue if you wish to discuss or propose your own idea.
 
-### Emit warnings for mistyped options (https://github.com/Homebrew/homebrew/issues/8937)
+### Emit warnings for mistyped options (https://github.com/Homebrew/brew/issues/1860)
 Currently providing options that don't exist for Homebrew commands silently ignores them. These should instead print a warning to user. This project will involve adding a new DSL for commands in Homebrew/brew to declare what options they accept and migrating all uses of `ARGV.include?` (and potentially all monkeypatching of `ARGV` itself) to this new DSL and abstraction.
 
 ### Improve brew tests coverage percentage by writing more tests
