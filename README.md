@@ -28,6 +28,7 @@ Please read https://wiki.gnome.org/Outreachy/#Submit_an_Application and apply vi
 - [@apjanke](https://github.com/apjanke) (andrew@apjanke.net)
 - [@tdsmith](https://github.com/tdsmith)
 - [@ilovezfs](https://github.com/ilovezfs)
+- [@JCount](https://github.com/jcount)
 - more to follow
 
 Mentorship happens privately on our Homebrew maintainer's Slack and publicly on GitHub pull requests. Each student and project will be assigned a mentor but all students will work with all mentors.
