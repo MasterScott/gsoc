@@ -35,7 +35,7 @@ https://github.com/blog/2312-how-to-run-a-google-summer-of-code-project-on-githu
 
 ## Technologies Used and Requirements
 
-Homebrew is written mostyl in Ruby (with small amounts of Bash), runs on Apple's macOS operating system and uses Git and GitHub for version control and updates. You do not need to have used any of these before but must have access to a Mac and be willing to learn Ruby, Git and GitHub.
+Homebrew is written mostly in Ruby (with small amounts of Bash), runs on Apple's macOS operating system and uses Git and GitHub for version control and updates. You do not need to have used any of these before but must have access to a Mac and be willing to learn Ruby, Git and GitHub.
 
 ## Ideas
 These are suggestions that would make good Google Summer of Code projects. Feel free to open an issue if you wish to discuss or propose your own idea.
