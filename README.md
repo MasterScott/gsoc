@@ -48,7 +48,7 @@ The `HOMEBREW_CACHE` should be rearranged to have a `Cellar`-like hierarchy with
 irrelevant files to free up disk space.
 
 ### Add support for metaformulae (https://github.com/Homebrew/brew/issues/2300)
-Metaformulae would be those that do not install any files themselves but allow `depends_on` multiple formulae (and casks) to support installing a collection of related software. This would involve creating a new DSL that e.g. doesn't need an `install` method and figuring out both the techical solution for depending on Casks and how to configure the interface so e.g. a normal `brew install` does not install X11 unexpectedly.
+Metaformulae would be those that do not install any files themselves but allow `depends_on` multiple formulae (and casks) to support installing a collection of related software. This would involve creating a new DSL that e.g. doesn't need an `install` method and figuring out both the technical solution for depending on Casks and how to configure the interface so e.g. a normal `brew install` does not install X11 unexpectedly.
 
 ### Optimise formula and resource download ordering (https://github.com/Homebrew/brew/issues/1666)
 When `brew install`ing multiple formulae with multiple `resource`s the downloads do not happen all at the beginning but are interleaved through the `brew install` process (even with `resource`s within a single formula). This means if a single download fails mid-way through a lengthy build process the user may not notice and have to retry again later. This should be improved so the usability of Homebrew is improved. Similarly, this project could be extended to cover `caveats` and warnings for formulae being output all at the end of multiple `brew install`s for easy reference.
