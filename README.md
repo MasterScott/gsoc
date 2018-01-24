@@ -1,7 +1,5 @@
-# Homebrew's Outreachy and Google Summer of Code
+# Homebrew's Google Summer of Code
 Homebrew is a package manager for macOS written in Ruby.
-
-These ideas are suggestions that would make good Outreachy or Google Summer of Code projects. They are a starting point. Check out our proposal template, and feel free to open an issue to ask questions or discuss other ideas.
 
 ## Application Instructions
 
@@ -17,23 +15,16 @@ Homebrew is actively seeking to diversify our contributors and especially welcom
 ### Google Summer of Code
 Please read and apply via https://summerofcode.withgoogle.com/get-started/.
 
-### Outreachy
-Please read https://wiki.gnome.org/Outreachy/#Submit_an_Application and apply via https://outreachy.gnome.org/?q=program_home&prg=6.
-
 ## Mentors
 - [@MikeMcQuaid](https://github.com/mikemcquaid) (mike@mikemcquaid.com)
 - [@mistydemeo](https://github.com/mistydemeo) (mistydemeo@gmail.com)
-- [@woodruffw](https://github.com/woodruffw) (william@yossarian.net)
-- [@jawshooah](https://github.com/jawshooah) (hagins.josh@gmail.com)
-- [@apjanke](https://github.com/apjanke) (andrew@apjanke.net)
-- [@tdsmith](https://github.com/tdsmith)
 - [@ilovezfs](https://github.com/ilovezfs)
 - [@JCount](https://github.com/jcount)
 - more to follow
 
 Mentorship happens privately on our Homebrew maintainer's Slack and publicly on GitHub pull requests. Each student and project will be assigned a mentor but all students will work with all mentors.
 
-Check out GitHub's blog post on how to run GSoC on GitHub:
+Check out GitHub's blog post on how to run GSoC on GitHub for the standards expected from maintainers and students:
 https://github.com/blog/2312-how-to-run-a-google-summer-of-code-project-on-github
 
 ## Pass Requirements
@@ -44,32 +35,29 @@ https://github.com/blog/2312-how-to-run-a-google-summer-of-code-project-on-githu
 
 ## Technologies Used and Requirements
 
-Homebrew is written in Ruby, runs on Apple's macOS operating system and uses Git and GitHub for version control and updates. You do not need to have used any of these before but must have access to a Mac and be willing to learn Ruby, Git and GitHub.
+Homebrew is written mostyl in Ruby (with small amounts of Bash), runs on Apple's macOS operating system and uses Git and GitHub for version control and updates. You do not need to have used any of these before but must have access to a Mac and be willing to learn Ruby, Git and GitHub.
 
 ## Ideas
-These are suggestions that would make good Outreachy or Google Summer of Code projects. Feel free to open an issue if you wish to discuss or propose your own idea.
+These are suggestions that would make good Google Summer of Code projects. Feel free to open an issue if you wish to discuss or propose your own idea.
 
 ### Emit warnings for mistyped options (https://github.com/Homebrew/brew/issues/1860)
 Currently providing options that don't exist for Homebrew commands silently ignores them. These should instead print a warning to user. This project will involve adding a new DSL for commands in Homebrew/brew to declare what options they accept and migrating all uses of `ARGV.include?` (and potentially all monkeypatching of `ARGV` itself) to this new DSL and abstraction.
 
-### Improve brew tests coverage percentage by writing more tests
-Homebrew's code coverage for `brew tests` is poor. This would be improved by writing more unit and integration tests for Homebrew and improving our test suite to make it easier and faster to run and write tests. You should have experience with unit testing to apply and will be writing tests in RSpec.
-
-### Better support pinning to a major/minor version with Homebrew Bundle and `@`-versioned formulae
-Users of Homebrew Bundle may wish to pin to a particular version of a package without knowing about versioned formulae. These formulae should be used automatically when possible. Inspiration can be taken from RubyGems and a `Brewfile.lock` file could be generated.
-
-### Add features to resources
-Homebrew provides `resource` blocks for lightweight formulae-like things within formulae. These should be extended to support patching with `patch do` blocks, inferring versions from the formula, sharing cached resource downloads when the same file is downloaded between formulae, being conditionally downloaded and other improvements you suggest.
-
-### Add `variant`s as an `option` alternative
-A `variant do` block should allow specifying dependencies, resources, exclusivity with other `variant`s and other DSL methods inside itself and can be specified like an option. This will require working with both Homebrew/brew code and Homebrew/homebrew-core formulae code to adapt existing code to use variants instead of options.
-
-### Cache subdirectories for formulae and versions for speedup
+### Cache subdirectories for formulae and versions for speedup (https://github.com/Homebrew/brew/issues/568)
 The `HOMEBREW_CACHE` should be rearranged to have a `Cellar`-like hierarchy with subdirectories for formulae and then versions, resources and patches. This should be used to speed up `brew cleanup` so that it can be implemented in Bash and run automatically to clean up now
 irrelevant files to free up disk space.
 
-### Port `brew audit` rules to RuboCop
-`brew audit` now runs RuboCop custom cops to enforce and automatically fix Homebrew coding style guidelines within supported editors and using the `rubocop` tool. All possible `brew audit` rules (e.g. those using `regex` matches) should be migrated to use RuboCop instead of custom `brew audit` logic.
+### Add support for metaformulae (https://github.com/Homebrew/brew/issues/2300)
+Metaformulae would be those that do not install any files themselves but allow `depends_on` multiple formulae (and casks) to support installing a collection of related software. This would involve creating a new DSL that e.g. doesn't need an `install` method and figuring out both the techical solution for depending on Casks and how to configure the interface so e.g. a normal `brew install` does not install X11 unexpectedly.
+
+### Optimise formula and resource download ordering (https://github.com/Homebrew/brew/issues/1666)
+When `brew install`ing multiple formulae with multiple `resource`s the downloads do not happen all at the beginning but are interleaved through the `brew install` process (even with `resource`s within a single formula). This means if a single download fails mid-way through a lengthy build process the user may not notice and have to retry again later. This should be improved so the usability of Homebrew is improved. Similarly, this project could be extended to cover `caveats` and warnings for formulae being output all at the end of multiple `brew install`s for easy reference.
+
+### Simplify bottling (binary package creationg) for taps (third-party repositories) (https://github.com/Homebrew/brew/issues/3346)
+Using free resources on Travis CI or Circle CI and `brew test-bot` it should be possible to create a documented, supported workflow for creating bottles for taps and have them be e.g. uploaded and published within the usual GitHub PR workflow (so only a "Merge pull request" is required by the tap maintainer). This would simplify the process of running a tap as tap maintainers would not need to support building from source (which is more error prone)
+
+### Better support pinning to a major/minor version with Homebrew Bundle and `@`-versioned formulae
+Users of Homebrew Bundle may wish to pin to a particular version of a package without knowing about versioned formulae. These formulae should be used automatically when possible. Inspiration can be taken from RubyGems, a `Brewfile.lock` file could be generated and formulae could be automatically copied into a tap where they could remain at the same version until they are manually updated in future.
 
 ### Other Ideas
-You can also get inspiration from [open `help wanted` issues on Homebrew/brew](https://github.com/homebrew/brew/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22). Please discuss any of these with us before submission to maximise your changes of being accepted.
+You can also get inspiration from [open `help wanted` issues on Homebrew/brew](https://github.com/homebrew/brew/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) and [open `help wanted` issues on Homebrew/homebrew-core](https://github.com/homebrew/homebrew-core/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22). Please discuss any of these with us before submission to maximise your changes of being accepted.
