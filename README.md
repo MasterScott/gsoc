@@ -53,7 +53,7 @@ Metaformulae would be those that do not install any files themselves but allow `
 ### Optimise formula and resource download ordering (https://github.com/Homebrew/brew/issues/1666)
 When `brew install`ing multiple formulae with multiple `resource`s the downloads do not happen all at the beginning but are interleaved through the `brew install` process (even with `resource`s within a single formula). This means if a single download fails mid-way through a lengthy build process the user may not notice and have to retry again later. This should be improved so the usability of Homebrew is improved. Similarly, this project could be extended to cover `caveats` and warnings for formulae being output all at the end of multiple `brew install`s for easy reference.
 
-### Simplify bottling (binary package creationg) for taps (third-party repositories) (https://github.com/Homebrew/brew/issues/3346)
+### Simplify bottling (binary package creation) for taps (third-party repositories) (https://github.com/Homebrew/brew/issues/3346)
 Using free resources on Travis CI or Circle CI and `brew test-bot` it should be possible to create a documented, supported workflow for creating bottles for taps and have them be e.g. uploaded and published within the usual GitHub PR workflow (so only a "Merge pull request" is required by the tap maintainer). This would simplify the process of running a tap as tap maintainers would not need to support building from source (which is more error prone)
 
 ### Better support pinning to a major/minor version with Homebrew Bundle and `@`-versioned formulae
